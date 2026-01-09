@@ -24,10 +24,6 @@
         .container {
             max-width: 1200px;
             margin: 0 auto;
-            background: rgba(255, 255, 255, 0.95);
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
         }
 
         header {
@@ -35,6 +31,8 @@
             color: white;
             padding: 60px 40px;
             text-align: center;
+            border-radius: 20px 20px 0 0;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
         }
 
         header h1 {
@@ -49,34 +47,9 @@
             animation: fadeInUp 0.8s ease;
         }
 
-        nav {
-            background: #fff;
-            padding: 20px 40px;
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-            flex-wrap: wrap;
-            border-bottom: 2px solid #f0f0f0;
-        }
-
-        nav a {
-            color: #667eea;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 1.1em;
-            transition: all 0.3s ease;
-            padding: 8px 16px;
-            border-radius: 8px;
-        }
-
-        nav a:hover {
-            background: #667eea;
-            color: white;
-            transform: translateY(-2px);
-        }
-
         .content {
             padding: 40px;
+            background: transparent;
         }
 
         section {
@@ -86,26 +59,27 @@
 
         section h2 {
             font-size: 2.2em;
-            color: #667eea;
+            color: white;
             margin-bottom: 30px;
             padding-bottom: 15px;
-            border-bottom: 3px solid #667eea;
+            border-bottom: 3px solid white;
             display: inline-block;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
         }
 
         .card {
-            background: white;
+            background: rgba(255, 255, 255, 0.95);
             border-radius: 15px;
             padding: 30px;
             margin-bottom: 25px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
             transition: all 0.3s ease;
             border-left: 4px solid #667eea;
         }
 
         .card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.2);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
         }
 
         .card h3 {
@@ -181,13 +155,13 @@
             text-decoration: underline;
         }
 
-
-
         footer {
             background: #333;
             color: white;
             text-align: center;
             padding: 30px;
+            border-radius: 0 0 20px 20px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
         }
 
         footer a {
@@ -207,17 +181,17 @@
         }
 
         .skill-category {
-            background: white;
+            background: rgba(255, 255, 255, 0.95);
             border-radius: 15px;
             padding: 25px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
             transition: all 0.3s ease;
-            border-left: 4px solid #667eea;
+            border-left: 4px solid white;
         }
 
         .skill-category:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.2);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
         }
 
         .skill-category h3 {
@@ -249,6 +223,7 @@
             color: white;
             transform: scale(1.05);
         }
+        
         header a {
             color: white;
             text-decoration: none;
@@ -258,22 +233,51 @@
             text-decoration: underline;
         }
 
-        .download-button {
-    display: inline-block;
-    padding: 10px 20px;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color: white;
-    text-decoration: none;
-    border-radius: 8px;
-    font-weight: 600;
-    transition: all 0.3s ease;
-    margin-top: 15px;
-}
+        nav {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 20px 40px;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
 
-.download-button:hover {
-    transform: translateY(-2px);
-    opacity: 0.9;
-}
+        nav a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1em;
+            transition: all 0.3s ease;
+            padding: 8px 16px;
+            border-radius: 8px;
+        }
+
+        nav a:hover {
+            background: #667eea;
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        .download-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            margin-top: 15px;
+        }
+
+        .download-button:hover {
+            transform: translateY(-2px);
+            opacity: 0.9;
+        }
 
         @keyframes fadeIn {
             from {
@@ -316,12 +320,9 @@
             .content {
                 padding: 20px;
             }
-            
-            nav {
-                gap: 15px;
-            }
         }
-                @media (max-width: 992px) {
+        
+        @media (max-width: 992px) {
             .skills-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
@@ -339,12 +340,9 @@
         <header>
             <img src="profile.png" alt="Aniruth Sundararajan" class="profile-pic">
             <h1>Aniruth Sundararajan</h1>
-            <p>📧 <a href="mailto:aniruths10@gmail.com">aniruths10  @gmail.com</a> |  📞 <a href="tel:+1 8456895615">+1 8456895615</a> |  🔗 <a href="https://www.linkedin.com/in/aniruth-sundararajan-7363b5221/">LinkedIn</a> | <a href="https://github.com/Aniruth1011/">
+            <p>📧 <a href="mailto:aniruths10@gmail.com">aniruths10@gmail.com</a> | 📞 <a href="tel:+18456895615">+1 8456895615</a> | 🔗 <a href="https://www.linkedin.com/in/aniruth-sundararajan-7363b5221/">LinkedIn</a> | <a href="https://github.com/Aniruth1011/">
   <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub" style="width:20px; height:20px; vertical-align:middle;"> GitHub
-</a>
-
-</p>
-
+</a></p>
         </header>
 
         <nav>
@@ -354,8 +352,8 @@
             <a href="#projects">Projects</a>
             <a href="#publications">Publications</a>
             <a href="#awards">Awards</a>
-<a href="assets/Aniruth_Sundararajan.pdf" download="Aniruth_Sundararajan.pdf">Resume</a>
-
+            <a href="assets/Aniruth_Sundararajan.pdf" download="Aniruth_Sundararajan.pdf">Resume</a>
+        </nav>
 
         <div class="content">
             <!-- EDUCATION SECTION -->
@@ -689,13 +687,10 @@
 
         <footer>  
             <p>&copy; 2024 Aniruth Sundararajan. All rights reserved.</p>
-            <p>📧 <a href="mailto:aniruths10@gmail.com">aniruths10  @gmail.com</a> |  📞 <a href="tel:+1 8456895615">+1 8456895615</a> |  🔗 <a href="https://www.linkedin.com/in/aniruth-sundararajan-7363b5221/">LinkedIn</a> | <a href="https://github.com/Aniruth1011/">
+            <p>📧 <a href="mailto:aniruths10@gmail.com">aniruths10@gmail.com</a> | 📞 <a href="tel:+18456895615">+1 8456895615</a> | 🔗 <a href="https://www.linkedin.com/in/aniruth-sundararajan-7363b5221/">LinkedIn</a> | <a href="https://github.com/Aniruth1011/">
   <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub" style="width:20px; height:20px; vertical-align:middle;"> GitHub
+</a></p>
         </footer>
-    
-    
     </div>
-    
-
 </body>
 </html>
