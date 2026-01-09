@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aniruth Sundararajan - Portfolio</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        }
+
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 60px 40px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            animation: fadeInDown 0.8s ease;
+        }
+
+        header p {
+            font-size: 1.3em;
+            opacity: 0.95;
+            animation: fadeInUp 0.8s ease;
+        }
+
+        nav {
+            background: #fff;
+            padding: 20px 40px;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            border-bottom: 2px solid #f0f0f0;
+        }
+
+        nav a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1em;
+            transition: all 0.3s ease;
+            padding: 8px 16px;
+            border-radius: 8px;
+        }
+
+        nav a:hover {
+            background: #667eea;
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        .content {
+            padding: 40px;
+        }
+
+        section {
+            margin-bottom: 60px;
+            animation: fadeIn 1s ease;
+        }
+
+        section h2 {
+            font-size: 2.2em;
+            color: #667eea;
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+            border-bottom: 3px solid #667eea;
+            display: inline-block;
+        }
+
+        .card {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 25px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            border-left: 4px solid #667eea;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.2);
+        }
+
+        .card h3 {
+            color: #333;
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+
+        .card .meta {
+            color: #666;
+            font-size: 0.95em;
+            margin-bottom: 15px;
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .card .meta span {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .card p {
+            color: #555;
+            line-height: 1.8;
+            margin-bottom: 10px;
+        }
+
+        .card ul {
+            margin-left: 20px;
+            margin-top: 10px;
+            color: #555;
+        }
+
+        .card ul li {
+            margin-bottom: 8px;
+        }
+
+        .tags {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-top: 15px;
+        }
+
+        .tag {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            font-weight: 500;
+        }
+
+        .link {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .link:hover {
+            color: #764ba2;
+            text-decoration: underline;
+        }
+
+
+
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 30px;
+        }
+
+        footer a {
+            color: white;
+            transition: opacity 0.3s ease;
+        }
+
+        footer a:hover {
+            opacity: 0.8;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin-top: 20px;
+        }
+
+        .skill-category {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            border-left: 4px solid #667eea;
+        }
+
+        .skill-category:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.2);
+        }
+
+        .skill-category h3 {
+            color: #667eea;
+            font-size: 1.3em;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .tech-items {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .tech-item {
+            background: #f8f9fa;
+            padding: 8px 14px;
+            border-radius: 8px;
+            font-size: 0.9em;
+            color: #333;
+            transition: all 0.3s ease;
+        }
+
+        .tech-item:hover {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            transform: scale(1.05);
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2em;
+            }
+            
+            .content {
+                padding: 20px;
+            }
+            
+            nav {
+                gap: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Aniruth Sundararajan</h1>
+            <p>📧 <a href="mailto:aniruths10@gmail.com">aniruths10@gmail.com</a> | 🔗 <a href="https://www.linkedin.com/in/aniruth-sundararajan-7363b5221/">LinkedIn</a> | <a href="https://github.com/Aniruth1011/">GitHub</a></p>
+
+        </header>
+
+        <nav>
+            <a href="#education">Education</a>
+            <a href="#experience">Experience</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#publications">Publications</a>
+            <a href="#awards">Awards</a>
+        </nav>
+
+        <div class="content">
+            <!-- EDUCATION SECTION -->
+            <section id="education">
+                <h2>Education</h2>
+                
+                <div class="card">
+                    <h3>Masters Computer Science (Artificial Intelligence)</h3>
+                    <div class="meta">
+                        <span>🎓 University of Southern California</span>
+                        <span>📅 2025 - 2027</span>
+                        <span>📍 Los Angeles, CA</span>
+                    </div>
+                    <p>GPA: 4.0/4.0</p>
+                    <p>Relevant Coursework: Foundations of AI, Machine Learning</p>
+                </div>
+
+                <div class="card">
+                    <h3>B.Tech in Artificial Intelligence and Data Science</h3>
+                    <div class="meta">
+                        <span>🎓 Shiv Nadar University Chennai</span>
+                        <span>📅 2021 - 2025</span>
+                        <span>📍 Chennai, India</span>
+                    </div>
+                    <p>GPA: 9.41/10</p>
+                    <p>Relevant Coursework: Data Structures, Analysis of Algorithms, Deep Learning, Machine Learning, NLP, Web Development, Computer Vision, Artificial Intelligence, Reinforcement Learning, Foundations of Data Science</p>
+                </div>
+            </section>
+
+            <!-- WORK EXPERIENCE SECTION -->
+            <section id="experience">
+                <h2>Work Experience</h2>
+                
+                <div class="card">
+                    <h3>Research Intern</h3>
+                    <div class="meta">
+                        <span>🏢 Vision and AI Lab, Dept. of CDS, IISc Bangalore</span>
+                        <span>📅 Feb 2025 – Jul 2025</span>
+                        <span>📍 Bangalore, India</span>
+                    </div>
+                    <p>Worked on advanced 3D reconstruction and dynamic scene rendering using cutting-edge computer vision techniques.</p>
+                    <ul>
+                        <li>Developed a high-fidelity 3D car model from video footage using 3D Gaussian Splatting (3DGS) and 4DGS.</li>
+                        <li>Applied 3D reconstruction, geometric computer vision, and deep learning for advanced scene understanding.</li>
+                    </ul>
+                    <div class="tags">
+                        <span class="tag">3D Reconstruction</span>
+                        <span class="tag">Computer Vision</span>
+                        <span class="tag">Deep Learning</span>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3>Computer Vision Intern</h3>
+                    <div class="meta">
+                        <span>🏢 ProWiz Analytics</span>
+                        <span>📅 Sep 2024 – Oct 2024</span>
+                        <span>📍 [City, Country]</span>
+                    </div>
+                    <p>Developed real-time multi-camera tracking solutions to optimize factory monitoring and worker safety.</p>
+                    <ul>
+                        <li>Designed and deployed a multi-camera tracking pipeline for monitoring worker entry/exit using CCTV footage.</li>
+                        <li>Implemented object detection, multi-camera feed synchronization, and real-time tracking algorithms.</li>
+                        <li>Enhanced workplace safety and efficiency by automating crowd analytics and surveillance intelligence.</li>
+                    </ul>
+                    <div class="tags">
+                        <span class="tag">Object Detection</span>
+                        <span class="tag">Multi-Camera Tracking</span>
+                        <span class="tag">Computer Vision</span>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3>Computer Vision Developer Intern</h3>
+                    <div class="meta">
+                        <span>🏢 IIIT Hyderabad</span>
+                        <span>📅 May 2024 – Dec 2024</span>
+                        <span>📍 Hyderabad, India</span>
+                    </div>
+                    <p>Analyzed classroom group dynamics using AI to measure student attention and activities for EdTech research.</p>
+                    <ul>
+                        <li>Developed AI framework for recognizing classroom interactions and student attention metrics.</li>
+                        <li>Implemented multi-person detection, pose estimation, and activity recognition pipelines.</li>
+                        <li>Applied computer vision and behavioral data analytics to improve educational technology research.</li>
+                    </ul>
+                    <div class="tags">
+                        <span class="tag">Deep Learning</span>
+                        <span class="tag">Activity Recognition</span>
+                        <span class="tag">Pose Estimation</span>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3>Engineering Intern</h3>
+                    <div class="meta">
+                        <span>🏢 Class One Exchange Inc (C1X Inc)</span>
+                        <span>📅 May 2023 – Jul 2025</span>
+                        <span>📍 [City, Country]</span>
+                    </div>
+                    <p>Built AI-driven systems for personalized advertising and automated food recognition & recipe generation.</p>
+                    <ul>
+                        <li>Developed an AI-driven advertising system using transfer learning, deep learning, and GPT-4 for personalized ad generation.</li>
+                        <li>Built an end-to-end food recognition system to identify dishes, extract ingredients, and recommend recipes.</li>
+                        <li>Designed a recipe generation model with an Encoder-Decoder approach and ingredient predictor.</li>
+                        <li>Scraped and curated a dataset of 3000+ food images with annotated labels for supervised training.</li>
+                    </ul>
+                    <div class="tags">
+                        <span class="tag">Deep Learning</span>
+                        <span class="tag">NLP</span>
+                        <span class="tag">Computer Vision</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SKILLS & TECH STACK SECTION -->
+            <section id="skills">
+                <h2>Skills & Tech Stack</h2>
+                
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h3>💻 Programming Languages</h3>
+                        <div class="tech-items">
+                            <div class="tech-item">Python</div>
+                            <div class="tech-item">C++</div>
+                            <div class="tech-item">C</div>
+                            <div class="tech-item">Java</div>
+                            <div class="tech-item">R</div>
+                            <div class="tech-item">SQL</div>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <h3>🤖 Machine Learning & AI</h3>
+                        <div class="tech-items">
+                            <div class="tech-item">PyTorch</div>
+                            <div class="tech-item">TensorFlow</div>
+                            <div class="tech-item">Keras</div>
+                            <div class="tech-item">OpenCV</div>
+                            <div class="tech-item">NLTK</div>
+                            <div class="tech-item">scikit-learn</div>
+                            <div class="tech-item">LangChain</div>
+                            <div class="tech-item">LangGraph</div>
+                            <div class="tech-item">LangSmith</div>
+                            <div class="tech-item">RAG Systems</div>
+                            <div class="tech-item">Hugging Face</div>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <h3>📊 Data Science & Visualization</h3>
+                        <div class="tech-items">
+                            <div class="tech-item">NumPy</div>
+                            <div class="tech-item">Pandas</div>
+                            <div class="tech-item">Matplotlib</div>
+                            <div class="tech-item">Seaborn</div>
+                            <div class="tech-item">Tableau</div>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <h3>🚀 MLOps & Deployment</h3>
+                        <div class="tech-items">
+                            <div class="tech-item">Flask</div>
+                            <div class="tech-item">Streamlit</div>
+                            <div class="tech-item">MLflow</div>
+                            <div class="tech-item">Weights & Biases (W&B)</div>
+                            <div class="tech-item">LangSmith</div>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <h3>🔧 Version Control & Tools</h3>
+                        <div class="tech-items">
+                            <div class="tech-item">Git</div>
+                            <div class="tech-item">GitHub</div>
+                            <div class="tech-item">Poetry</div>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <h3>📐 Mathematical Foundations</h3>
+                        <div class="tech-items">
+                            <div class="tech-item">Linear Algebra</div>
+                            <div class="tech-item">Probability</div>
+                            <div class="tech-item">Statistics</div>
+                            <div class="tech-item">Optimization Methods</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- PROJECTS SECTION -->
+            <section id="projects">
+                <h2>Projects</h2>
+
+                <div class="card">
+                    <h3>Real-Time Travel Agent</h3>
+                    <div class="meta">
+                        <span>📅 2025</span>
+                        <span>🔗 <a href="https://github.com/Aniruth1011/AI_RealTime_Travel_Agent" class="link" target="_blank">GitHub</a></span>
+                    </div>
+                    <p>Built an AI-driven real-time travel assistant capable of providing personalized recommendations using live data.</p>
+                    <p>Developed the system using Python, RAG (Retrieval-Augmented Generation), LangChain, LangGraph, and vector embeddings.</p>
+                    <p>Integrated live APIs for weather, currency conversion, and attraction information to deliver real-time travel guidance.</p>  
+                    <div class="tags">
+                        <span class="tag">AI</span>
+                        <span class="tag">Python</span>
+                        <span class="tag">RAG</span>
+                        <span class="tag">LangChain</span>
+                        <span class="tag">APIs</span>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3>OCT Image Classification</h3>
+                    <div class="meta">
+                        <span>📅 2024</span>
+                        <span>🔗 <a href="https://github.com/Aniruth1011/OCT_CLASS" class="link" target="_blank">GitHub</a></span>
+                    </div>
+                    <p>Developed and trained a deep learning ensemble model using ResNet, AlexNet, and MobileNet architectures for classifying OCT retinal scans. Achieved 99%+ accuracy in distinguishing diabetic vs. non-diabetic retinal images, leveraging transfer learning and CNN-based feature extraction.</p>
+                    <div class="tags">
+                        <span class="tag">PyTorch</span>
+                        <span class="tag">Deep Learning</span>
+                        <span class="tag">Computer Vision</span>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3>AI-Powered Answer Paper Grading & Plagiarism Detection</h3>
+                    <div class="meta">
+                        <span>📅 2023</span>
+                        <span>🔗 <a href="https://github.com/J-Karthik-palaniappan/aipg" class="link" target="_blank">GitHub</a></span>
+                    </div>
+                    <p>Implemented an AI system for automated grading of exam responses with detailed feedback, integrated with a plagiarism detection module to generate similarity scores. Secured INR 10,000 in project funding, demonstrating practical applicability. Applied NLP and deep learning techniques for educational solutions.</p>
+                    <div class="tags">
+                        <span class="tag">NLP</span>
+                        <span class="tag">Deep Learning</span>
+                        <span class="tag">Education Tech</span>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3>Person Tracking in Crowds using Multiple Cameras</h3>
+                    <div class="meta">
+                        <span>📅 2023</span>
+                        <span>🔗 <a href="https://github.com/Karthik-Aniruth-Rhea/Person-Tracking-multiple-camera" class="link" target="_blank">GitHub</a></span>
+                    </div>
+                    <p>Developed a multi-camera tracking system for real-time person re-identification and trajectory monitoring in crowded environments. Implemented cross-camera synchronization and re-identification algorithms using computer vision, object detection, and multi-object tracking.</p>
+                    <div class="tags">
+                        <span class="tag">Computer Vision</span>
+                        <span class="tag">Multi-Object Tracking</span>
+                        <span class="tag">Surveillance</span>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3>Automated Classroom Attendance from CCTV Footage</h3>
+                    <div class="meta">
+                        <span>📅 2023</span>
+                        <span>🔗 <a href="https://github.com/Karthik-Aniruth-Rhea/Person-Tracking-multiple-camera" class="link" target="_blank">GitHub</a></span>
+                    </div>
+                    <p>Designed an automated attendance system using CCTV footage to monitor students in real-time. Developed a computer vision pipeline to identify, track, and record individual presence and engagement, producing detailed attendance and behavioral analytics reports.</p>
+                    <div class="tags">
+                        <span class="tag">Computer Vision</span>
+                        <span class="tag">Object Tracking</span>
+                        <span class="tag">Analytics</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- PUBLICATIONS SECTION -->
+            <section id="publications">
+                <h2>Publications</h2>
+                
+                <div class="card">
+                    <h3>UDC-Mamba: Deep State Space Model for Under Display Camera Image Restoration</h3>
+                    <div class="meta">
+                        <span>📅 Dec 2024</span>
+                        <span>📄 Computer Vision and Image Processing, Springer Nature</span>
+                        <span>🔗 <a href="https://link.springer.com/chapter/10.1007/978-3-031-93703-3_6" class="link" target="_blank">Link</a></span>
+                    </div>
+                    <p><strong>Authors:</strong> A. Sundararajan, M. Levin, K. Palaniappan, et al.</p>
+                    <p>Achieved state-of-the-art results with an LPIPS of 0.04 for under-display camera image restoration using deep state space models.</p>
+                    <div class="tags">
+                        <span class="tag">Image Restoration</span>
+                        <span class="tag">State Space Models</span>
+                        <span class="tag">Computer Vision</span>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <h3>Uf-PromptGAN: A Nighttime Flare Removal Network Using Learnable Prompts</h3>
+                    <div class="meta">
+                        <span>📅 Dec 2024</span>
+                        <span>📄 TENCON 2024 - IEEE Region 10 Conference</span>
+                        <span>🔗 <a href="https://doi.org/10.1109/TENCON61640.2024.10902969" class="link" target="_blank">DOI</a></span>
+                    </div>
+                    <p><strong>Authors:</strong> A. Sundararajan, L. M S, J. C V</p>
+                    <p>Used Uformer to remove nighttime flare regions and applied a GAN with learnable prompts to inpaint the affected areas, improving night photography image quality.</p>
+                    <div class="tags">
+                        <span class="tag">GANs</span>
+                        <span class="tag">Nighttime Image Processing</span>
+                        <span class="tag">Computer Vision</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- AWARDS SECTION -->
+            <section id="awards">
+                <h2>Honors and Awards</h2>
+                
+                <div class="card">
+                    <h3>Academic Excellence Award</h3>
+                    <div class="meta">
+                        <span>🏆 Shiv Nadar University</span>
+                        <span>📅 2021–2025</span>
+                    </div>
+                    <p>Received for exemplary academic and co-curricular performance at Shiv Nadar University.</p>
+                </div>
+
+                <div class="card">
+                    <h3>Merit Scholarship</h3>
+                    <div class="meta">
+                        <span>🏆 Shiv Nadar University Chennai</span>
+                        <span>📅 2022</span>
+                    </div>
+                    <p>Awarded Merit Scholarship for outstanding academic excellence at Shiv Nadar University Chennai.</p>
+                </div>
+            </section>
+        </div>
+
+        <footer>  
+            <p>&copy; 2024 Aniruth Sundararajan. All rights reserved.</p>
+            <p>📧 <a href="mailto:aniruths10@gmail.com">aniruths10@gmail.com</a> | 🔗 <a href="https://www.linkedin.com/in/aniruth-sundararajan-7363b5221/">LinkedIn</a> | <a href="https://github.com/Aniruth1011/">GitHub</a></p>
+        </footer>
+    </div>
+</body>
+</html>
