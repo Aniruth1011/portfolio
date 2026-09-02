@@ -338,7 +338,26 @@
             <!-- WORK EXPERIENCE SECTION -->
             <section id="experience">
                 <h2>Work Experience</h2>
-                
+
+                <div class="card">
+                    <h3>Research Assistant</h3>
+                    <div class="meta">
+                        <span>🏢 IARPA LINCS, USC</span>
+                        <span>📅 March 2026 – Present</span>
+                        <span>📍 Los Angeles, CA</span>
+                    </div>
+                    <p>Designing video-based person re-identification systems that fuse 2D appearance features with 3D geometric priors.</p>
+                    <ul>
+                        <li>Designed and implemented a video-based person re-identification framework using DINOv3 as the feature extractor and a Pyramidal Spatio-Temporal Attention (PSTA) module for temporal feature aggregation, followed by an identity classification head; achieved 90% mAP and 91% Rank-1 accuracy on standard ReID benchmarks.</li>
+                        <li>Extending the framework with 3D human priors by integrating SMPL-based body meshes, 3D geometric representations, and contrastive learning to learn robust, viewpoint-invariant identity embeddings from multi-view renderings for improved cross-view person re-identification.</li>
+                    </ul>
+                    <div class="tags">
+                        <span class="tag">Person Re-ID</span>
+                        <span class="tag">3D Vision</span>
+                        <span class="tag">Computer Vision</span>
+                    </div>
+                </div>
+
                 <div class="card">
                     <h3>Research Intern</h3>
                     <div class="meta">
@@ -379,43 +398,40 @@
                 </div>
 
                 <div class="card">
-                    <h3>Computer Vision Developer Intern</h3>
+                    <h3>Software Engineer Intern</h3>
                     <div class="meta">
-                        <span>🏢 IIIT Hyderabad</span>
+                        <span>🏢 International Institute of Information Technology, Hyderabad</span>
                         <span>📅 May 2024 – Dec 2024</span>
                         <span>📍 Hyderabad, India</span>
                     </div>
-                    <p>Analyzed classroom group dynamics using AI to measure student attention and activities for EdTech research.</p>
+                    <p>Designed a scalable AI-driven classroom analytics system to analyze real-time classroom behavior.</p>
                     <ul>
-                        <li>Developed AI framework for recognizing classroom interactions and student attention metrics.</li>
-                        <li>Implemented multi-person detection, pose estimation, and activity recognition pipelines.</li>
-                        <li>Applied computer vision and behavioral data analytics to improve educational technology research.</li>
+                        <li>Designed and implemented a scalable AI-driven classroom analytics system using YOLOv8, OpenCV, and deep activity recognition models to analyze real-time classroom behavior.</li>
+                        <li>Processed live video streams at 30 FPS with 30 ms latency per frame to extract attendance, engagement, and movement insights, achieving 99% mAP on a curated dataset of 40+ students.</li>
                     </ul>
                     <div class="tags">
-                        <span class="tag">Deep Learning</span>
+                        <span class="tag">YOLOv8</span>
                         <span class="tag">Activity Recognition</span>
-                        <span class="tag">Pose Estimation</span>
+                        <span class="tag">Computer Vision</span>
                     </div>
                 </div>
 
                 <div class="card">
-                    <h3>Engineering Intern</h3>
+                    <h3>Software Engineer Intern</h3>
                     <div class="meta">
                         <span>🏢 Class One Exchange Inc (C1X Inc)</span>
-                        <span>📅 May 2023 – Jul 2025</span>
-                        <span>📍 [City, Country]</span>
+                        <span>📅 May 2023 – Jun 2025</span>
+                        <span>📍 Remote, Part Time</span>
                     </div>
-                    <p>Built AI-driven systems for personalized advertising and automated food recognition & recipe generation.</p>
+                    <p>Built and deployed AI-driven systems for personalized advertising and automated food recognition on AWS EC2.</p>
                     <ul>
-                        <li>Developed an AI-driven advertising system using transfer learning, deep learning, and GPT-4 for personalized ad generation.</li>
-                        <li>Built an end-to-end food recognition system to identify dishes, extract ingredients, and recommend recipes.</li>
-                        <li>Designed a recipe generation model with an Encoder-Decoder approach and ingredient predictor.</li>
-                        <li>Scraped and curated a dataset of 3000+ food images with annotated labels for supervised training.</li>
+                        <li>Built and deployed an Indian food-recognition pipeline on AWS EC2 by fine-tuning Recipe1M on 3,000+ self-scraped images, achieving approximately 97% Top-1 accuracy and 2.4 s inference per image; extracted ingredients from customer-uploaded photos and auto-added them to baskets, reducing search friction.</li>
+                        <li>Deployed an AI ad-placement pipeline on AWS EC2 using computer vision segmentation for product cutouts, inpainting for image compositing, and Gemini for taglines, generating ∼2 ad variants per minute.</li>
                     </ul>
                     <div class="tags">
-                        <span class="tag">Deep Learning</span>
-                        <span class="tag">NLP</span>
                         <span class="tag">Computer Vision</span>
+                        <span class="tag">AWS</span>
+                        <span class="tag">Generative AI</span>
                     </div>
                 </div>
             </section>
@@ -446,11 +462,27 @@
                             <div class="tech-item">OpenCV</div>
                             <div class="tech-item">NLTK</div>
                             <div class="tech-item">scikit-learn</div>
+                            <div class="tech-item">XGBoost</div>
+                            <div class="tech-item">GNNs</div>
+                            <div class="tech-item">Recommender Systems</div>
                             <div class="tech-item">LangChain</div>
                             <div class="tech-item">LangGraph</div>
                             <div class="tech-item">LangSmith</div>
                             <div class="tech-item">RAG Systems</div>
                             <div class="tech-item">Hugging Face</div>
+                            <div class="tech-item">MCP</div>
+                            <div class="tech-item">Multi-Agent Systems</div>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <h3>🔎 Data & Retrieval</h3>
+                        <div class="tech-items">
+                            <div class="tech-item">FAISS</div>
+                            <div class="tech-item">Vector Search</div>
+                            <div class="tech-item">Embeddings</div>
+                            <div class="tech-item">Caching</div>
+                            <div class="tech-item">Asynchronous Processing</div>
                         </div>
                     </div>
 
@@ -468,8 +500,13 @@
                     <div class="skill-category">
                         <h3>🚀 MLOps & Deployment</h3>
                         <div class="tech-items">
+                            <div class="tech-item">FastAPI</div>
                             <div class="tech-item">Flask</div>
                             <div class="tech-item">Streamlit</div>
+                            <div class="tech-item">AWS (EC2)</div>
+                            <div class="tech-item">Docker</div>
+                            <div class="tech-item">Kafka</div>
+                            <div class="tech-item">Prometheus</div>
                             <div class="tech-item">MLflow</div>
                             <div class="tech-item">Weights & Biases (W&B)</div>
                             <div class="tech-item">LangSmith</div>
@@ -500,6 +537,71 @@
             <!-- PROJECTS SECTION -->
             <section id="projects">
                 <h2>Projects</h2>
+
+                <div class="card">
+                    <h3>Multi-Agent Supply Chain Planner & Orchestrator</h3>
+                    <div class="meta">
+                        <span>📅 2026</span>
+                        <span>🔗 <a href="https://github.com/Aniruth1011" class="link" target="_blank">GitHub</a></span>
+                    </div>
+                    <p>Developed a LangGraph-based planner/orchestrator for a multi-agent supply chain platform, enabling multi-hop reasoning across procurement, compliance, logistics, and analytics tasks; achieved 90% task completion.</p>
+                    <p>Cut average output token usage per query by 10% by replacing free-form LLM reasoning with schema-constrained structured outputs and offloading routing and retrieval to deterministic tools, reducing redundant model calls.</p>
+                    <div class="tags">
+                        <span class="tag">LangGraph</span>
+                        <span class="tag">Multi-Agent Systems</span>
+                        <span class="tag">Structured Outputs</span>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3>Personalized Restaurant Recommendation Engine with Group Support</h3>
+                    <div class="meta">
+                        <span>📅 2025</span>
+                        <span>🔗 <a href="https://github.com/Aniruth1011" class="link" target="_blank">GitHub</a></span>
+                    </div>
+                    <p>Built a stateful restaurant-planning AI agent with LangGraph and FastAPI for personalized, cold-start, and group recommendations, orchestrating grounded discovery and feedback tools; achieved 95% tool-calling accuracy and 100% grounding.</p>
+                    <p>Productionized agent workflows on AWS EC2 with asynchronous tool execution, caching, SSE streaming, MCP integration, and Prometheus observability, achieving approximately 205 ms average tool latency.</p>
+                    <p>Trained a residual MLP content encoder with supervised contrastive learning, combining cosine retrieval with geographic, popularity, and quality reranking; achieved Recall@20 of 84.3%, NDCG@20 of 0.624, and MRR@20 of 0.509 across an 80K+ restaurant catalog, cutting latency from 1.8 s to 316 ms (5.8×).</p>
+                    <div class="tags">
+                        <span class="tag">LangGraph</span>
+                        <span class="tag">FastAPI</span>
+                        <span class="tag">Recommender Systems</span>
+                        <span class="tag">MCP</span>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3>Temporal Graph Fraud Detection & Early-Warning System</h3>
+                    <div class="meta">
+                        <span>📅 2025</span>
+                        <span>🔗 <a href="https://github.com/Aniruth1011" class="link" target="_blank">GitHub</a></span>
+                    </div>
+                    <p>Developed a temporal PNA graph neural network for fraud detection on highly imbalanced transaction data with only 0.05% fraud, using multi-hop neighbor sampling, temporal and edge features, reverse message passing, and class-weighted training; achieved 0.800 precision, 0.438 F1, 0.341 PR-AUC, and 0.991 ROC-AUC.</p>
+                    <p>Built a 30-day early-warning fraud prediction system using graph embeddings and boosted models, tracking experiments with MLflow; achieved 0.520 F1 and 0.402 PR-AUC with XGBoost.</p>
+                    <p>Engineered a Dockerized Kafka-ready fraud-scoring platform with event-time processing, SQLite audit trails, and PSI, KS, and Wasserstein drift detection; processed 50K transactions at 2,644 transactions/sec with 100% prediction coverage.</p>
+                    <div class="tags">
+                        <span class="tag">GNNs</span>
+                        <span class="tag">Fraud Detection</span>
+                        <span class="tag">Kafka</span>
+                        <span class="tag">MLflow</span>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3>PreReqGraph – Prerequisite Curriculum Discovery over Academic Citation Graphs</h3>
+                    <div class="meta">
+                        <span>📅 2025</span>
+                        <span>🔗 <a href="https://github.com/Aniruth1011" class="link" target="_blank">GitHub</a></span>
+                    </div>
+                    <p>Built a prerequisite curriculum discovery engine that traverses a 169K-node academic citation graph to identify and sequence foundational papers for any research query.</p>
+                    <p>Trained a GraphSAGE model with hard-negative sampling and a co-citation contrastive objective; fused graph-aware and SPECTER2 embeddings via FAISS ANN indexing to reduce end-to-end query latency by 40%.</p>
+                    <p>Improved top-10 seed-paper relevance by 15% over a semantic-only baseline using hybrid GNN and semantic retrieval, with a nine-signal scorer producing a staged learning curriculum.</p>
+                    <div class="tags">
+                        <span class="tag">GraphSAGE</span>
+                        <span class="tag">FAISS</span>
+                        <span class="tag">Semantic Retrieval</span>
+                    </div>
+                </div>
 
                 <div class="card">
                     <h3>Real-Time Travel Agent</h3>
